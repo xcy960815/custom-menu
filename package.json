@@ -26,5 +26,5 @@
     "vue-template-compiler": "^2.6.11"
   },
   "typings": "./types/husky-left-menu.d.ts",
-  "dist": "./dist/husky-left-menu.umd.min.js"
+  "main": "./dist/husky-left-menu.umd.min.js"
 }

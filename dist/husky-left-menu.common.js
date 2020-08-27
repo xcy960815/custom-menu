@@ -2606,12 +2606,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7d5ca404-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=0b7562ba&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('Menu',{attrs:{"menuData":_vm.menuData,"defaultActive":_vm.defaultActive}})],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7d5ca404-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Menu.vue?vue&type=template&id=24e9d008&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-menu',{staticClass:"layout-aside-menu",attrs:{"default-active":_vm.defaultActive,"background-color":"#001529","text-color":"rgba(255,255,255,.65)","active-text-color":"#fff","collapse":_vm.isCollapse,"collapse-transition":false,"router":true}},_vm._l((_vm.menuData),function(route){return _c('menu-item',{key:route.path,attrs:{"route":route}})}),1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=0b7562ba&scoped=true&
+// CONCATENATED MODULE: ./src/Menu.vue?vue&type=template&id=24e9d008&
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
 function _classCallCheck(instance, Constructor) {
@@ -3584,13 +3584,6 @@ function isPromise(obj) {
     return obj instanceof Promise || (obj && typeof obj.then === 'function');
 }
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7d5ca404-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Menu.vue?vue&type=template&id=24e9d008&
-var Menuvue_type_template_id_24e9d008_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-menu',{staticClass:"layout-aside-menu",attrs:{"default-active":_vm.defaultActive,"background-color":"#001529","text-color":"rgba(255,255,255,.65)","active-text-color":"#fff","collapse":_vm.isCollapse,"collapse-transition":false,"router":true}},_vm._l((_vm.menuData),function(route){return _c('menu-item',{key:route.path,attrs:{"route":route}})}),1)}
-var Menuvue_type_template_id_24e9d008_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/Menu.vue?vue&type=template&id=24e9d008&
-
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7d5ca404-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/menu-item.vue?vue&type=template&id=2023b930&scoped=true&
 var menu_itemvue_type_template_id_2023b930_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.route && _vm.route.children && _vm.route.children.length > 0)?_c('el-submenu',{attrs:{"index":_vm.route.name || ''}},[_c('template',{slot:"title"},[(_vm.route.meta.menuIcon)?_c('i',{class:_vm.route.meta.menuIcon}):_vm._e(),_c('span',{attrs:{"slot":"title"},slot:"title"},[_vm._v(_vm._s(_vm.route.meta.menuName))])]),_vm._l((_vm.route.children),function(childRoute){return [_c('menu-items',{key:childRoute.name,attrs:{"route":childRoute}})]})],2):(_vm.route && (_vm.route.meta.link || _vm.route.path))?_c('el-menu-item',{attrs:{"index":_vm.route.meta.link ? '' : _vm.route.path}},[(_vm.route.meta.menuIcon)?_c('i',{class:_vm.route.meta.menuIcon}):_vm._e(),(_vm.route.meta.link)?_c('a',{staticClass:"link-dom",attrs:{"slot":"title","target":_vm.route.meta.target,"href":_vm.route.meta.link},slot:"title"},[_vm._v(_vm._s(_vm.route.meta.menuName))]):_c('span',{attrs:{"slot":"title"},slot:"title"},[_vm._v(_vm._s(_vm.route.meta.menuName))])]):(_vm.route && _vm.route.redirect)?_c('el-menu-item',{attrs:{"index":_vm.route.name,"route":_vm.redirectRoute(_vm.route.redirect)}},[_c('span',{attrs:{"slot":"title"},slot:"title"},[_vm._v(_vm._s(_vm.route.meta.menuName))])]):_vm._e()}
 var menu_itemvue_type_template_id_2023b930_scoped_true_staticRenderFns = []
@@ -3827,8 +3820,8 @@ Menuvue_type_script_lang_ts_Menu = __decorate([vue_class_component_esm({
 
 var Menu_component = normalizeComponent(
   src_Menuvue_type_script_lang_ts_,
-  Menuvue_type_template_id_24e9d008_render,
-  Menuvue_type_template_id_24e9d008_staticRenderFns,
+  render,
+  staticRenderFns,
   false,
   null,
   null,
@@ -3837,175 +3830,10 @@ var Menu_component = normalizeComponent(
 )
 
 /* harmony default export */ var src_Menu = (Menu_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=script&lang=ts&
-
-
-
-
-
- // import { routes } from './mock'
-
-var Appvue_type_script_lang_ts_App = /*#__PURE__*/function (_Vue) {
-  _inherits(App, _Vue);
-
-  var _super = _createSuper(App);
-
-  function App() {
-    var _this;
-
-    _classCallCheck(this, App);
-
-    _this = _super.apply(this, arguments);
-    _this.menuData = [{
-      path: '/',
-      meta: {
-        menuName: 'root'
-      },
-      redirect: '/real-time-develop',
-      children: [{
-        path: '/real-time-develop',
-        name: '/real-time-develop',
-        meta: {
-          menuIcon: 'el-icon-setting',
-          menuName: '实时开发'
-        }
-      }, {
-        path: '/task-list',
-        name: '/task-list',
-        component: {
-          template: "<router-view />"
-        },
-        meta: {
-          menuName: '任务列表',
-          menuIcon: 'el-icon-setting'
-        },
-        children: [{
-          path: '/task-list/dev-task',
-          name: '/task-list/dev-task',
-          meta: {
-            menuName: '日常任务'
-          }
-        }, {
-          path: '/task-list/dev-job-version',
-          name: '/task-list/dev-job-version',
-          meta: {
-            menuName: '日常任务版本',
-            highLightActive: '/task-list/dev-task',
-            showInLeftMenu: false
-          }
-        }, {
-          path: '/task-list/online-task',
-          name: '/task-list/online-task',
-          // 线上任务
-          meta: {
-            menuName: '线上任务'
-          }
-        }, {
-          path: '/task-list/online-task-version',
-          name: '/task-list/online-task-version',
-          // 线上任务
-          meta: {
-            menuName: '线上任务版本',
-            showInLeftMenu: false,
-            highLightActive: '/task-list/online-task'
-          }
-        }]
-      }, {
-        path: '/udf-manage',
-        name: '/udf-manage',
-        meta: {
-          menuIcon: 'el-icon-setting',
-          menuName: 'udf管理'
-        }
-      }, {
-        path: '/data-mock',
-        name: '/data-mock',
-        meta: {
-          menuIcon: 'el-icon-setting',
-          menuName: '数据MOCK'
-        }
-      }, {
-        path: '/table-manager',
-        name: '/table-manager',
-        meta: {
-          menuIcon: 'el-icon-setting',
-          menuName: '表管理'
-        }
-      }, {
-        path: '/table-add',
-        name: '/table-add',
-        meta: {
-          menuIcon: 'el-icon-setting',
-          showInLeftMenu: false,
-          menuName: '新建表',
-          highLightActive: '/table-manager'
-        }
-      }, {
-        path: '/table-copy',
-        name: '/table-copy',
-        meta: {
-          menuIcon: 'el-icon-setting',
-          showInLeftMenu: false,
-          menuName: '复制表',
-          highLightActive: '/table-manager'
-        }
-      }, {
-        path: '/table-edit',
-        name: '/table-edit',
-        meta: {
-          menuIcon: 'el-icon-setting',
-          showInLeftMenu: false,
-          menuName: '编辑表',
-          highLightActive: '/table-manager'
-        }
-      }, {
-        path: '/task-audit',
-        name: '/task-audit',
-        meta: {
-          menuIcon: 'el-icon-setting',
-          menuName: '任务审核'
-        }
-      }]
-    }];
-    _this.defaultActive = '';
-    return _this;
-  }
-
-  return App;
-}(external_commonjs_vue_commonjs2_vue_root_Vue_default.a);
-
-Appvue_type_script_lang_ts_App = __decorate([vue_class_component_esm({
-  components: {
-    Menu: src_Menu
-  }
-})], Appvue_type_script_lang_ts_App);
-/* harmony default export */ var Appvue_type_script_lang_ts_ = (Appvue_type_script_lang_ts_App);
-// CONCATENATED MODULE: ./src/App.vue?vue&type=script&lang=ts&
- /* harmony default export */ var src_Appvue_type_script_lang_ts_ = (Appvue_type_script_lang_ts_); 
-// CONCATENATED MODULE: ./src/App.vue
-
-
-
-
-
-/* normalize component */
-
-var App_component = normalizeComponent(
-  src_Appvue_type_script_lang_ts_,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  "0b7562ba",
-  null
-  
-)
-
-/* harmony default export */ var src_App = (App_component.exports);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_App);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_Menu);
 
 
 

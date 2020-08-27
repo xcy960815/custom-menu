@@ -1,11 +1,11 @@
 {
   "name": "husky-left-menu",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "dist": "vue-cli-service build --target lib --name husky-left-menu"
+    "dist": "vue-cli-service build --target lib --name husky-left-menu ./src/Menu.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",

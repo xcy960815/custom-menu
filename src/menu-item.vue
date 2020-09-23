@@ -9,7 +9,7 @@
       <menu-items :route="childRoute" :key="childRoute.name"></menu-items>
     </template>
   </el-submenu>
-  <el-menu-item v-else-if="route && route.meta.link" :index="route.meta.link" :router="false">
+  <el-menu-item v-else-if="route && route.meta.link" index>
     <i v-if="route.meta.menuIcon" :class="route.meta.menuIcon"></i>
     <a
       slot="title"
@@ -51,23 +51,9 @@ export default class MenuItems extends Vue {
     default: false,
   })
   collapse!: boolean
-  // contentWidthGtElementWidth(text: string) {
-  //   // const spanNode = document.createElement('span') as HTMLSpanElement
-  //   // spanNode.innerHTML = text
-  //   // spanNode.className = 'getTextWidth'
-  //   // ;(document.querySelector('body') as HTMLBodyElement).appendChild(spanNode)
-  //   // const width = (document.querySelector('.getTextWidth') as any).offsetWidth
-  //   // ;(document.querySelector('.getTextWidth') as HTMLSpanElement).remove()
-
-  //   // const customElMenuItem: any = document.getElementsByClassName('.el-menu')
-  //   // console.log('customElMenuItem', customElMenuItem)
-  //   // return customElMenuItem.offsetWidth < width
-  //   if (text === '实时开发实时开发实时开发实时开发实时开发实时开发') {
-  //     return true
-  //   } else {
-  //     return false
-  //   }
-  // }
+  mounted() {
+    // console.log(this.$slots)
+  }
 }
 </script>
 <style lang='less' scoped>

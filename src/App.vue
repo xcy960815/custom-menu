@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Menu :menu-data="menuData" :collapse="isCollapse" :default-active="defaultActive"></Menu>
+    <Menu :menu-data="menuData" :collapse="isCollapse" :default-active="defaultActive">
+      <!-- <span>hahah 我是span</span> -->
+    </Menu>
     <el-button @click="isCollapse = !isCollapse">handleClick</el-button>
   </div>
 </template>

@@ -52,6 +52,10 @@ export default class HuskyLeftMenu extends Vue {
     default: '#fff',
   })
   activeTextColor!: String
+
+  // mounted() {
+  //   console.log(this.$slots)
+  // }
 }
 </script>
 

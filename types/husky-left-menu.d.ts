@@ -22,7 +22,7 @@ export interface RouteConfig
         // 跳转外部链接的方式
         target?: '_blank' | '_self' | '_parent' | '_top'
         menuIcon?: string
-        permisson?: string | Array<string>
+        permission?: string | Array<string>
     }
 }
 export declare class HuskyLeftMenu extends Vue {

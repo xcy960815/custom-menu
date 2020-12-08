@@ -1,4 +1,4 @@
-# husky-left-menu
+# 
 
 ## Project setup
 ```

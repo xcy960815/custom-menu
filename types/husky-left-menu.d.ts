@@ -23,6 +23,7 @@ export interface RouteConfig
         target?: '_blank' | '_self' | '_parent' | '_top'
         menuIcon?: string
         permission?: string | Array<string>
+        slotName?: string
     }
 }
 export declare class HuskyLeftMenu extends Vue {

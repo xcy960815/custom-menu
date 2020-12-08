@@ -3,31 +3,32 @@
   <el-submenu v-if="route && route.children && route.children.length > 0" :index="route.name || ''">
     <template slot="title">
       <i v-if="route.meta.menuIcon" :class="route.meta.menuIcon"></i>
-      <span slot="title">{{ route.meta.menuName }}</span>
+      <span>{{route.meta.menuName}}</span>
+      <slot v-if="route.meta.slotName" :name="route.meta.slotName"></slot>
     </template>
     <template v-for="childRoute in route.children">
-      <menu-items :route="childRoute" :key="childRoute.name"></menu-items>
+      <menu-items :route="childRoute" :key="childRoute.name">
+        <slot v-for="(val, key) in $slots" :name="key" :slot="key"></slot>
+      </menu-items>
     </template>
   </el-submenu>
   <el-menu-item v-else-if="route && route.meta.link" index>
-    <i v-if="route.meta.menuIcon" :class="route.meta.menuIcon"></i>
-    <a
-      slot="title"
-      :target="route.meta.target"
-      class="link-dom"
-      :href="route.meta.link"
-    >{{ route.meta.menuName}}</a>
+    <template slot="title">
+      <i v-if="route.meta.menuIcon" :class="route.meta.menuIcon"></i>
+      <a
+        :target="route.meta.target"
+        class="link-dom"
+        :href="route.meta.link"
+      >{{ route.meta.menuName}}</a>
+      <slot v-if="route.meta.slotName" :name="route.meta.slotName"></slot>
+    </template>
   </el-menu-item>
   <el-menu-item v-else-if="route && route.path" :index="route.path">
-    <i v-if="route.meta.menuIcon" :class="route.meta.menuIcon"></i>
-    <span slot="title">{{ route.meta.menuName}}</span>
-  </el-menu-item>
-  <el-menu-item
-    v-else-if="route && route.redirect"
-    :index="route.name"
-    :route="redirectRoute(route.redirect)"
-  >
-    <span slot="title">{{ route.meta.menuName }}</span>
+    <template slot="title">
+      <i v-if="route.meta.menuIcon" :class="route.meta.menuIcon"></i>
+      <span>{{ route.meta.menuName}}</span>
+      <slot v-if="route.meta.slotName" :name="route.meta.slotName"></slot>
+    </template>
   </el-menu-item>
 </template>
 
@@ -51,9 +52,6 @@ export default class MenuItems extends Vue {
     default: false,
   })
   collapse!: boolean
-  mounted() {
-    // console.log(this.$slots)
-  }
 }
 </script>
 <style lang='less' scoped>

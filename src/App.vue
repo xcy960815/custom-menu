@@ -1,9 +1,16 @@
 <template>
   <div id="app">
-    <Menu :menu-data="menuData" :collapse="isCollapse" :default-active="defaultActive">
-      <!-- <span>hahah 我是span</span> -->
+    <Menu
+      :menu-data="menuData"
+      :collapse="isCollapse"
+      style="height:100%;"
+      :default-active="defaultActive"
+    >
+      <span slot="real-time-develop" style="color:#fff;">哈哈哈</span>
+      <span slot="task-list" style="color:#fff;">{{count}}</span>
+      <!-- /task-list/dev-task -->
+      <span slot="/task-list/dev-task" style="color:#fff;margin-right:10px;">哈哈哈111</span>
     </Menu>
-    <el-button @click="isCollapse = !isCollapse">handleClick</el-button>
   </div>
 </template>
 
@@ -19,6 +26,12 @@ export default class App extends Vue {
   menuData = routes
   defaultActive: string = ''
   isCollapse: boolean = false
+  count: number = 0
+  // mounted() {
+  //   setInterval(() => {
+  //     this.count++
+  //   }, 1000)
+  // }
 }
 </script>
 <style lang='less'>
@@ -27,6 +40,7 @@ body,
 #app {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 #app {
   width: 200px;

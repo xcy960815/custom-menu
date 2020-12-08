@@ -9,7 +9,10 @@
     :collapse-transition="false"
     :router="true"
   >
-    <menu-item v-for="route in menuData" :route="route" :collapse="collapse" :key="route.name"></menu-item>
+    <menu-item v-for="route in menuData" :route="route" :collapse="collapse" :key="route.name">
+      <slot v-for="(val, key) in $slots" :name="key" :slot="key"></slot>
+      <!-- <slot name="xxx" slot="xxx"></slot> -->
+    </menu-item>
   </el-menu>
 </template>
 
@@ -17,6 +20,7 @@
 import { Component, Vue, Prop } from 'vue-property-decorator'
 import { RouteConfig } from '../types/husky-left-menu'
 import MenuItem from './menu-item.vue'
+
 @Component({
   components: {
     MenuItem,
@@ -52,10 +56,6 @@ export default class HuskyLeftMenu extends Vue {
     default: '#fff',
   })
   activeTextColor!: String
-
-  // mounted() {
-  //   console.log(this.$slots)
-  // }
 }
 </script>
 

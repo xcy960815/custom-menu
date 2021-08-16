@@ -3,13 +3,9 @@
     <Menu
       :menu-data="menuData"
       :collapse="isCollapse"
-      style="height:100%;"
+      style="height: 100%"
       :default-active="defaultActive"
     >
-      <span slot="real-time-develop" style="color:#fff;">哈哈哈</span>
-      <span slot="task-list" style="color:#fff;">{{count}}</span>
-      <!-- /task-list/dev-task -->
-      <span slot="/task-list/dev-task" style="color:#fff;margin-right:10px;">哈哈哈111</span>
     </Menu>
   </div>
 </template>
@@ -27,11 +23,6 @@ export default class App extends Vue {
   defaultActive: string = ''
   isCollapse: boolean = false
   count: number = 0
-  // mounted() {
-  //   setInterval(() => {
-  //     this.count++
-  //   }, 1000)
-  // }
 }
 </script>
 <style lang='less'>

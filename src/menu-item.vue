@@ -3,7 +3,7 @@
   <el-submenu v-if="route && route.children && route.children.length > 0" :index="route.name || ''">
     <template slot="title">
       <i v-if="route.meta.menuIcon" :class="route.meta.menuIcon"></i>
-      <span>{{route.meta.menuName}}</span>
+      <span>{{ route.meta.menuName }}</span>
       <slot v-if="route.meta.slotName" :name="route.meta.slotName"></slot>
     </template>
     <template v-for="childRoute in route.children">
@@ -15,18 +15,16 @@
   <el-menu-item v-else-if="route && route.meta.link" index>
     <template slot="title">
       <i v-if="route.meta.menuIcon" :class="route.meta.menuIcon"></i>
-      <a
-        :target="route.meta.target"
-        class="link-dom"
-        :href="route.meta.link"
-      >{{ route.meta.menuName}}</a>
+      <a :target="route.meta.target" class="link-dom" :href="route.meta.link">{{
+        route.meta.menuName
+      }}</a>
       <slot v-if="route.meta.slotName" :name="route.meta.slotName"></slot>
     </template>
   </el-menu-item>
   <el-menu-item v-else-if="route && route.path" :index="route.path">
     <template slot="title">
       <i v-if="route.meta.menuIcon" :class="route.meta.menuIcon"></i>
-      <span>{{ route.meta.menuName}}</span>
+      <span>{{ route.meta.menuName }}</span>
       <slot v-if="route.meta.slotName" :name="route.meta.slotName"></slot>
     </template>
   </el-menu-item>
@@ -63,8 +61,9 @@ export default class MenuItems extends Vue {
     color: #ffffff; //设置默认颜色
   }
 }
-/deep/.is-active {
-  background-color: #1890ff;
+
+.el-menu-item.is-active {
+  background: #1890ff !important;
 }
 .link-dom {
   display: block;
@@ -72,9 +71,7 @@ export default class MenuItems extends Vue {
   color: #fff; //设置默认颜色
 }
 .custom-el-menu-item {
-  // position: relative;
   overflow: hidden;
-  // display: flex;
   .custom-el-menu-tooltip {
     display: inline-block;
     width: 100px;

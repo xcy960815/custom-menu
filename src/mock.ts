@@ -6,7 +6,6 @@ export const routes: Array<RouteConfig> = [
         meta: {
             menuIcon: 'el-icon-setting',
             menuName: '实时开发',
-            slotName: 'real-time-develop',
         },
     },
     {
@@ -16,7 +15,6 @@ export const routes: Array<RouteConfig> = [
         meta: {
             menuName: '任务列表',
             menuIcon: 'el-icon-setting',
-            slotName: 'task-list',
         },
         children: [
             {
@@ -24,7 +22,6 @@ export const routes: Array<RouteConfig> = [
                 name: '/task-list/dev-task',
                 meta: {
                     menuName: '日常任务',
-                    slotName: '/task-list/dev-task',
                 },
             },
             {

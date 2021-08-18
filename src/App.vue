@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <Menu
+      class="menu"
       :menu-data="menuData"
       :collapse="isCollapse"
       style="height: 100%"
       :default-active="defaultActive"
     >
     </Menu>
+    <button @click="isCollapse = !isCollapse">展开收起</button>
   </div>
 </template>
 
@@ -21,7 +23,7 @@ import { routes } from './mock'
 export default class App extends Vue {
   menuData = routes
   defaultActive: string = ''
-  isCollapse: boolean = false
+  isCollapse: boolean = true
   count: number = 0
 }
 </script>
@@ -34,6 +36,6 @@ body,
   height: 100%;
 }
 #app {
-  width: 200px;
+  display: flex;
 }
 </style>
